@@ -1,5 +1,5 @@
 {
-  "name": "@acegalaxy/model-registry",
+  "name": "@acegalaxy-co/model-registry",
   "version": "0.1.0",
   "description": "3-layer LLM model registry: Notion DB → cache file → hardcoded defaults. Survives Notion outages and missing cache. Includes provider catalog scanner for daily auto-bump.",
   "main": "index.ts",
@@ -14,8 +14,15 @@
   ],
   "author": "acegalaxy.co",
   "license": "UNLICENSED",
-  "private": true,
+  "private": false,
   "engines": {
     "node": ">=18"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acegalaxy-co/ace_commons-model-registry-nodejs.git"
   }
 }
