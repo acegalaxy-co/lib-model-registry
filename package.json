@@ -1,28 +1,36 @@
 {
-  "name": "@acegalaxy-co/model-registry",
+  "name": "@acegalaxy/model-registry",
   "version": "0.1.0",
-  "description": "3-layer LLM model registry: Notion DB → cache file → hardcoded defaults. Survives Notion outages and missing cache. Includes provider catalog scanner for daily auto-bump.",
+  "description": "Notion-backed AI model registry — define model configs (provider, model, costs, capabilities) in a Notion table, sync to runtime via a single call. 3-layer fallback: Notion → cache → defaults.",
   "main": "index.ts",
   "scripts": {
     "test": "node --test test/"
   },
   "keywords": [
+    "ai",
     "llm",
-    "model",
-    "registry",
-    "ace-commons"
+    "model-registry",
+    "notion",
+    "claude",
+    "gpt",
+    "gemini",
+    "deepseek"
   ],
-  "author": "acegalaxy.co",
-  "license": "UNLICENSED",
+  "author": "ACE Galaxy <oss@acegalaxy.co>",
+  "license": "MIT",
   "private": false,
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/acegalaxy-co/ace_commons-model-registry-nodejs.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/acegalaxy-co/ace_commons-model-registry-nodejs/issues"
+  },
+  "homepage": "https://github.com/acegalaxy-co/ace_commons-model-registry-nodejs#readme"
 }
