@@ -2,9 +2,12 @@
   "name": "@acegalaxy/model-registry",
   "version": "0.1.0",
   "description": "Notion-backed AI model registry — define model configs (provider, model, costs, capabilities) in a Notion table, sync to runtime via a single call. 3-layer fallback: Notion → cache → defaults.",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "node --test test/"
+    "test": "node --test test/",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
   },
   "keywords": [
     "ai",
@@ -32,5 +35,23 @@
   "bugs": {
     "url": "https://github.com/acegalaxy-co/ace_commons-model-registry-nodejs/issues"
   },
-  "homepage": "https://github.com/acegalaxy-co/ace_commons-model-registry-nodejs#readme"
+  "homepage": "https://github.com/acegalaxy-co/ace_commons-model-registry-nodejs#readme",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md"
+  ],
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^20.0.0"
+  }
 }
