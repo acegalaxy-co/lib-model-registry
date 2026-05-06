@@ -1,5 +1,11 @@
 # @acegalaxy/model-registry
 
+[![npm version](https://img.shields.io/npm/v/@acegalaxy%2Fmodel-registry.svg)](https://www.npmjs.com/package/@acegalaxy/model-registry)
+[![npm downloads](https://img.shields.io/npm/dm/@acegalaxy%2Fmodel-registry.svg)](https://www.npmjs.com/package/@acegalaxy/model-registry)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node](https://img.shields.io/node/v/@acegalaxy%2Fmodel-registry.svg)](https://nodejs.org)
+
+
 Notion-backed AI model registry — define model configs (provider, model, costs, capabilities) in a Notion table, sync to runtime via a single call.
 
 Manage Claude / GPT / Gemini / DeepSeek configs (pricing, context window, aliases, capabilities) in one Notion DB; consumers load them at startup with safe fallbacks.
