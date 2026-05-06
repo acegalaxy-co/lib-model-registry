@@ -4,10 +4,11 @@
   "description": "Notion-backed AI model registry — define model configs (provider, model, costs, capabilities) in a Notion table, sync to runtime via a single call. 3-layer fallback: Notion → cache → defaults.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "node --test test/",
+    "test": "node --test test/*.test.js",
     "build": "tsc",
     "prepublishOnly": "npm run build",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "pretest": "npm run build"
   },
   "keywords": [
     "ai",
