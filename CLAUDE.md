@@ -1,4 +1,4 @@
-# @acegalaxy/model-registry
+# @kanelr/model-registry
 
 > **NPM commons library** — 3-layer LLM model registry: Notion DB → cache file → hardcoded defaults. Survives Notion outages and missing cache. Includes provider catalog scanner for daily auto-bump.
 > Cross-cutting rules: see framework `../../rules/00-index.md`.

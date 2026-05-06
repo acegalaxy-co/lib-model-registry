@@ -1,4 +1,4 @@
-# Contributing to @acegalaxy/model-registry
+# Contributing to @kanelr/model-registry
 
 Thanks for considering a contribution!
 

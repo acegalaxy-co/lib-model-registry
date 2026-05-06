@@ -1,7 +1,7 @@
-# @acegalaxy/model-registry
+# @kanelr/model-registry
 
-[![npm version](https://img.shields.io/npm/v/@acegalaxy%2Fmodel-registry.svg)](https://www.npmjs.com/package/@acegalaxy/model-registry)
-[![npm downloads](https://img.shields.io/npm/dm/@acegalaxy%2Fmodel-registry.svg)](https://www.npmjs.com/package/@acegalaxy/model-registry)
+[![npm version](https://img.shields.io/npm/v/@acegalaxy%2Fmodel-registry.svg)](https://www.npmjs.com/package/@kanelr/model-registry)
+[![npm downloads](https://img.shields.io/npm/dm/@acegalaxy%2Fmodel-registry.svg)](https://www.npmjs.com/package/@kanelr/model-registry)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node](https://img.shields.io/node/v/@acegalaxy%2Fmodel-registry.svg)](https://nodejs.org)
 
@@ -27,7 +27,7 @@ LLM model lineups change weekly: new versions, new prices, deprecations. Hardcod
 ## Install
 
 ```bash
-npm install @acegalaxy/model-registry
+npm install @kanelr/model-registry
 ```
 
 ## Quick start
@@ -45,7 +45,7 @@ Create a Notion DB with rows like:
 ### 2. Load registry at runtime
 
 ```ts
-import { loadModels } from "@acegalaxy/model-registry";
+import { loadModels } from "@kanelr/model-registry";
 
 const DEFAULTS = {
   "claude-opus-4": {
