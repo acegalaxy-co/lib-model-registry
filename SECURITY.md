@@ -24,7 +24,7 @@ or mitigation plan within 14 days for high-severity issues.
 
 In scope:
 
-- The published `@kanelr/model-registry` package on npm
+- The published `@acegalaxy/model-registry` package on npm
 - Source code in this repository
 
 Out of scope:

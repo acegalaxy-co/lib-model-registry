@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report a defect in @kanelr/model-registry
+about: Report a defect in @acegalaxy/model-registry
 title: "[bug] "
 labels: bug
 ---

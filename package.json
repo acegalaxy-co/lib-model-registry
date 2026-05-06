@@ -1,6 +1,6 @@
 {
-  "name": "@kanelr/model-registry",
-  "version": "0.1.0",
+  "name": "@acegalaxy/model-registry",
+  "version": "0.1.2",
   "description": "Notion-backed AI model registry — define model configs (provider, model, costs, capabilities) in a Notion table, sync to runtime via a single call. 3-layer fallback: Notion → cache → defaults.",
   "main": "dist/index.js",
   "scripts": {
@@ -46,7 +46,8 @@
     "./*": {
       "types": "./dist/*.d.ts",
       "default": "./dist/*.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist",
