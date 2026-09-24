@@ -1,12 +1,12 @@
-# Contributing to @acegalaxy/model-registry
+# Contributing to @acegalaxy/lib-model-registry
 
 Thanks for considering a contribution!
 
 ## Quick start
 
 ```bash
-git clone https://github.com/acegalaxy-co/ace_commons-model-registry-nodejs.git
-cd ace_commons-model-registry-nodejs
+git clone https://github.com/acegalaxy-co/lib-model-registry.git
+cd lib-model-registry
 npm install
 npm test
 ```

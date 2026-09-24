@@ -1,6 +1,6 @@
 "use strict";
 
-// @acegalaxy/model-registry — 3-layer LLM model loader.
+// @acegalaxy/lib-model-registry — 3-layer LLM model loader.
 //
 // Layer 1: Notion DB (source of truth, scheduler updates this)
 // Layer 2: local cache file (synced after each successful Notion load)

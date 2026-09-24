@@ -1,9 +1,8 @@
-# @acegalaxy/model-registry
+# @acegalaxy/lib-model-registry
 
-[![npm version](https://img.shields.io/npm/v/@acegalaxy%2Fmodel-registry.svg)](https://www.npmjs.com/package/@acegalaxy/model-registry)
-[![npm downloads](https://img.shields.io/npm/dm/@acegalaxy%2Fmodel-registry.svg)](https://www.npmjs.com/package/@acegalaxy/model-registry)
+Private git-dep — not published to npm.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node](https://img.shields.io/node/v/@acegalaxy%2Fmodel-registry.svg)](https://nodejs.org)
 
 
 Notion-backed AI model registry — define model configs (provider, model, costs, capabilities) in a Notion table, sync to runtime via a single call.
@@ -27,7 +26,7 @@ LLM model lineups change weekly: new versions, new prices, deprecations. Hardcod
 ## Install
 
 ```bash
-npm install @acegalaxy/model-registry
+npm install "@acegalaxy/lib-model-registry@github:acegalaxy-co/lib-model-registry#v0.2.0"
 ```
 
 ## Quick start
@@ -45,7 +44,7 @@ Create a Notion DB with rows like:
 ### 2. Load registry at runtime
 
 ```ts
-import { loadModels } from "@acegalaxy/model-registry";
+import { loadModels } from "@acegalaxy/lib-model-registry";
 
 const DEFAULTS = {
   "claude-opus-4": {

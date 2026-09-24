@@ -24,7 +24,7 @@ or mitigation plan within 14 days for high-severity issues.
 
 In scope:
 
-- The published `@acegalaxy/model-registry` package on npm
+- The private git-dep `@acegalaxy/lib-model-registry` package (npm package deprecated)
 - Source code in this repository
 
 Out of scope:

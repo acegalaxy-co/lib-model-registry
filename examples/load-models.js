@@ -1,11 +1,11 @@
-// load-models — minimal example for @acegalaxy/model-registry
+// load-models — minimal example for @acegalaxy/lib-model-registry
 //
 // Setup:
 //   npm install
 //   npm run build
 //   node examples/load-models.js
 
-const { loadModels } = require("@acegalaxy/model-registry");
+const { loadModels } = require("@acegalaxy/lib-model-registry");
 
 (async () => {
   const models = await loadModels({

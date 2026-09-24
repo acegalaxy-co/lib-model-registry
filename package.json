@@ -1,12 +1,11 @@
 {
-  "name": "@acegalaxy/model-registry",
-  "version": "0.1.2",
+  "name": "@acegalaxy/lib-model-registry",
+  "version": "0.2.0",
   "description": "Notion-backed AI model registry — define model configs (provider, model, costs, capabilities) in a Notion table, sync to runtime via a single call. 3-layer fallback: Notion → cache → defaults.",
   "main": "dist/index.js",
   "scripts": {
     "test": "node --test test/*.test.js",
     "build": "tsc",
-    "prepublishOnly": "npm run build",
     "clean": "rm -rf dist",
     "pretest": "npm run build"
   },
@@ -22,21 +21,15 @@
   ],
   "author": "ACE Galaxy <oss@acegalaxy.co>",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "engines": {
     "node": ">=20"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/acegalaxy-co/ace_commons-model-registry-nodejs.git"
-  },
+  "repository": "github:acegalaxy-co/lib-model-registry",
   "bugs": {
-    "url": "https://github.com/acegalaxy-co/ace_commons-model-registry-nodejs/issues"
+    "url": "https://github.com/acegalaxy-co/lib-model-registry/issues"
   },
-  "homepage": "https://github.com/acegalaxy-co/ace_commons-model-registry-nodejs#readme",
+  "homepage": "https://github.com/acegalaxy-co/lib-model-registry#readme",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {

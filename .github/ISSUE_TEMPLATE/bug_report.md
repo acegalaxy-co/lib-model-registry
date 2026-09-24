@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report a defect in @acegalaxy/model-registry
+about: Report a defect in @acegalaxy/lib-model-registry
 title: "[bug] "
 labels: bug
 ---
