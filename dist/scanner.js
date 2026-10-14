@@ -27,16 +27,21 @@ function classify(modelId) {
         return { family: "claude", marker: null };
     }
     if (id.startsWith("gemini-")) {
-        if (id.includes("flash-lite"))
-            return { family: "gemini", marker: "flash-lite" };
-        if (id.endsWith("flash"))
-            return { family: "gemini", marker: "flash" };
-        if (id.endsWith("pro"))
-            return { family: "gemini", marker: "pro" };
-        return { family: "gemini", marker: null };
+        // Marker = exact suffix after the version ("flash", "flash-lite", "pro").
+        // IDs that are not gemini-<version>-<suffix> (codenames, other product
+        // lines, "-latest" aliases) keep their whole tail as marker, so they only
+        // match themselves instead of sharing one catch-all bucket.
+        const tail = id.slice("gemini-".length).replace(/-preview$/, "");
+        const m = tail.match(/^\d+(?:\.\d+)*-(.+)$/);
+        return { family: "gemini", marker: m ? m[1] : tail };
     }
-    if (id.startsWith("deepseek-"))
-        return { family: "deepseek", marker: null };
+    if (id.startsWith("deepseek-")) {
+        // Same rule as Gemini: deepseek-v<version>-<suffix> buckets by suffix,
+        // anything else ("chat", "reasoner") by its whole tail.
+        const tail = id.slice("deepseek-".length);
+        const m = tail.match(/^v?\d+(?:\.\d+)*(?:-(.+))?$/);
+        return { family: "deepseek", marker: m ? m[1] || null : tail };
+    }
     return { family: "unknown", marker: null };
 }
 function versionTuple(modelId) {
@@ -47,7 +52,7 @@ function versionTuple(modelId) {
     const dashed = id.match(/-(\d+)-(\d+)/);
     if (dashed)
         return [parseInt(dashed[1], 10), parseInt(dashed[2], 10)];
-    const single = id.match(/-(\d+)/);
+    const single = id.match(/-v?(\d+)/);
     if (single)
         return [parseInt(single[1], 10), 0];
     return [0, 0];

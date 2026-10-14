@@ -1,5 +1,5 @@
 export type ModelFamily = "gpt" | "claude" | "gemini" | "deepseek" | "unknown";
-export type ModelMarker = "mini" | "nano" | "pro" | "haiku" | "sonnet" | "opus" | "flash" | "flash-lite" | null;
+export type ModelMarker = string | null;
 export interface Classification {
     family: ModelFamily;
     marker: ModelMarker;
