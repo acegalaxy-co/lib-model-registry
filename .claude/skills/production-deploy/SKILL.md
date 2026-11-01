@@ -42,7 +42,7 @@ không tự suy diễn từ CI xanh cũ.
 
 
 0. **Project guard — verify repo identity trước mọi hành động SSH/cloud/git production.**
-   - Project slug kỳ vọng: `lib-model-registry`; remote identity kỳ vọng: `github.com/acegalaxy-co/lib-model-registry`
+   - Project slug kỳ vọng: `lib-model-registry`; remote identity kỳ vọng: `git.imba.co:790/acegalaxy_docs/ace_galaxy/ace_libs/lib-model-registry`
      (đã sanitize `host/owner/repo`, lowercase; deploy host `<deploy-ssh-host>`, service `<service-name>`).
    - Tính repo-root slug từ `basename "$(git rev-parse --show-toplevel)"` (lowercase,
      ký tự non-alnum → `-`) và yêu cầu khớp `lib-model-registry`.
@@ -59,9 +59,9 @@ không tự suy diễn từ CI xanh cũ.
    - Sanitize URL của remote chính về lowercase `host/owner/repo`: hỗ trợ `git@host:org/repo.git`,
      `https://[userinfo@]host/org/repo.git`, và `ssh://[userinfo@]host/org/repo.git`; bỏ userinfo,
      dấu `/` đầu, và `.git` cuối.
-   - Yêu cầu sanitized remote-chính identity khớp CHÍNH XÁC `github.com/acegalaxy-co/lib-model-registry`. Nếu `github.com/acegalaxy-co/lib-model-registry`
+   - Yêu cầu sanitized remote-chính identity khớp CHÍNH XÁC `git.imba.co:790/acegalaxy_docs/ace_galaxy/ace_libs/lib-model-registry`. Nếu `git.imba.co:790/acegalaxy_docs/ace_galaxy/ace_libs/lib-model-registry`
      có dạng placeholder (`<...>`), remote chính không parse được, repo-root slug lệch, hoặc remote identity
-     lệch → STOP ngay lập tức; báo user command này thuộc về `lib-model-registry` / `github.com/acegalaxy-co/lib-model-registry`,
+     lệch → STOP ngay lập tức; báo user command này thuộc về `lib-model-registry` / `git.imba.co:790/acegalaxy_docs/ace_galaxy/ace_libs/lib-model-registry`,
      repo/root/remote chính hiện tại là `<repo identity>` — không chạy deploy. Không có override.
    - Nếu bất kỳ config nào command này dùng vẫn còn dạng placeholder (`<...>`) — `<deploy-ssh-host>`, `<service-name>`, `<remote-repo-path>`, `<healthcheck-cmd>` — STOP;
      deploy config chưa đủ (chạy lại install.sh với env var HARNESS_DEPLOY_*).
